@@ -73,7 +73,7 @@ class MqttHelper(private val context: Context, private val mqttOptions: MqttOpti
     }
 
     override fun connect() {
-        //try {
+        try {
             if (mqttAndroidClient?.isConnected == true) {
                 reconnectHandler?.removeCallbacksAndMessages(null)
                 if (mState != MqttStatus.SUCCESS) {
@@ -96,9 +96,9 @@ class MqttHelper(private val context: Context, private val mqttOptions: MqttOpti
                     }
                 })
             }
-        //} catch (e: MqttException) {
-        //    changeState(MqttStatus.FAILURE, e)
-        //}
+        } catch (e: MqttException) {
+            changeState(MqttStatus.FAILURE, e)
+        }
     }
 
     private fun reconnect() {

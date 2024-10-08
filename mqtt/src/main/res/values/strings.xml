@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mqtt_notification_title">服务正在运行</string>
-    <string name="mqtt_notification_content">服务运行可接收消息通知</string>
+    <string name="mqtt_notification_title">MQTT 通信标题</string>
+    <string name="mqtt_notification_content">MQTT 通知内容</string>
     <bool name="mqtt_foreground_notification_low_26">false</bool>
 </resources>
